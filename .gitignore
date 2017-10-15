@@ -44,7 +44,6 @@ captures/
 
 # myignore
 lib
-Documents
 .settings
 .gitignore~
 readme.txt~
