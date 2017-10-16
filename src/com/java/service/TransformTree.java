@@ -17,11 +17,11 @@ public class TransformTree {
 
 	public static void main(String[] args) {
 		TransformTree transformTree = new TransformTree();
-		String transformtxtpath = PathConfig.ROOT_PATH+PathConfig.TRANSFORM_TXT_PATH+"1.txt";
-		String eventName = "萨徳系统";
+		String transformtxtpath = PathConfig.ROOT_PATH+PathConfig.TRANSFORM_TXT_PATH+"孕妇坠楼.txt";
+		String eventName = "孕妇坠楼";
 		Object transformJson = transformTree.getTransformJson(transformtxtpath, eventName);
 		System.out.println(transformJson);
-		FileUtil.rwFile(transformJson.toString(), PathConfig.ROOT_PATH+PathConfig.TRANSFORM_JSON_PATH, "transform315.json");
+		FileUtil.rwFile(transformJson.toString(), PathConfig.ROOT_PATH+PathConfig.TRANSFORM_JSON_PATH, "transform584.json");
 	}
 
 	
@@ -38,7 +38,7 @@ public class TransformTree {
 		int headNum = 1;
 		String[] line = text.split("\n");
 		for (int i = 0; i < line.length; i++) {
-			String[] Name = line[i].split("`");
+			String[] Name = line[i].split("~");
 			for (int j = 0; j < Name.length; j++) {
 				if (!nodeMap.containsKey(Name[j])) {
 					nodeMap.put(Name[j], headNum);
@@ -52,7 +52,7 @@ public class TransformTree {
 		// 子节点对应的多个父节点id列表
 		Map<String, Set<Integer>> nameIdMap = new HashMap<String, Set<Integer>>();
 		for (int i = 0; i < line.length; i++) {
-			String[] nameList = line[i].split("`");
+			String[] nameList = line[i].split("~");
 			Set<Integer> headList = new HashSet<Integer>();
 			headList.add(0);
 			nameIdMap.put(nameList[0], headList);

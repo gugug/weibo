@@ -86,23 +86,23 @@ public class MainMonHelperImpl {
 		Document sexDocument = new Document();
 		Document areaDocument = new Document();
 		
-		ageDocument.append("_id", 311);
-		ageDocument.append("a79", 1283);
-		ageDocument.append("a80",  728);
-		ageDocument.append("a90",1502);
-		ageDocument.append("a95", 2303);
-		ageDocument.append("anull", 4181);
+		ageDocument.append("_id", 586);
+		ageDocument.append("a79",32835);
+		ageDocument.append("a80", 1728);
+		ageDocument.append("a90",45024);
+		ageDocument.append("a95",73034);
+		ageDocument.append("anull", 51815);
 
 		
-		sexDocument.append("_id", 311);
-		sexDocument.append("girl",  4363);
-		sexDocument.append("boy", 5323);
+		sexDocument.append("_id", 586);
+		sexDocument.append("girl",  83631);
+		sexDocument.append("boy",103233);
 
 	
 		
-		//插入
-//		mongoDaoImpl.insert(mongoDataBase, ageTable, ageDocument);
-//		mongoDaoImpl.insert(mongoDataBase, sexTable, sexDocument);
+		//插入 
+		mongoDaoImpl.insert(mongoDataBase, ageTable, ageDocument);
+		mongoDaoImpl.insert(mongoDataBase, sexTable, sexDocument);
 //		mongoDaoImpl.insert(mongoDataBase, areaTable, areaDocument);
 		
 		//查询
@@ -154,7 +154,7 @@ public class MainMonHelperImpl {
 
 	    
 	    //检索对应的table的全部
-		List<Map<String, Integer>> queryAllResult = mongoDaoImpl.queryAll(mongoDataBase, areaTable);
+		List<Map<String, Integer>> queryAllResult = mongoDaoImpl.queryAll(mongoDataBase, sexTable);
 		mongoDaoImpl.printList(queryAllResult);
 		
 		//在对应的table下根据map查找

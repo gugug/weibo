@@ -12,8 +12,8 @@ import com.mongodb.client.MongoDatabase;
 public class MongoHelper {
 	
 	    static final String DBName = "weibo";
-		static final String ServerAddress = "192.168.235.21"; 
-//		static final String ServerAddress = "192.168.235."; 
+//		static final String ServerAddress = "192.168.235.21."; 
+		static final String ServerAddress = "127.0.0.1"; 
 		static final int PORT = 27017;
 	    
 	    public MongoHelper(){

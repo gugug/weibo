@@ -11,8 +11,8 @@ import com.mongodb.client.MongoDatabase;
 
 public class ChinaMapUtil {
 	public static void main(String[] args) {
-		String areapath = "./Documents/result/美联航暴力拖拽华人乘客下机/area.txt";
-		String eid = "311";
+		String areapath = "/home/iiip/java/workspace/weibo/WeiboNewsProject/WebContent/Documents/CharacterTXT/乐视融创/area.txt";
+		String eid = "582";
 		insertArea(areapath, eid);
 	}
 	
@@ -28,7 +28,7 @@ public class ChinaMapUtil {
 		MongoDatabase mongoDataBase = mongoHelper.getMongoDataBase(mongoClient);
 		MongoDaoImpl mongoDaoImpl = new MongoDaoImpl();
 		Map<String, Object> areaMap = FileUtil.readAreaTxt(areapath);
-		areaMap.put("_id", eid);
+		areaMap.put("_id",Integer.parseInt(eid));
 	    mongoDaoImpl.insert(mongoDataBase, "area", new Document(areaMap));
 
 	}

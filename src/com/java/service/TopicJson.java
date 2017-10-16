@@ -16,11 +16,11 @@ import com.java.po.TopicObj;
 public class TopicJson {
 	
 	public static void main(String[] args) {
-		String path = PathConfig.ROOT_PATH+PathConfig.TOPIC_XML_PATH+"topic315.xml";
+		String path = PathConfig.ROOT_PATH+PathConfig.TOPIC_XML_PATH+"topic586.xml";
 		
 		XmlFileUtil xmlFileUtil = new XmlFileUtil();
 		xmlFileUtil.loadXml(path);
-		new TopicJson().writeTopicJson(xmlFileUtil, "topic315.json");
+		new TopicJson().writeTopicJson(xmlFileUtil, "topic586.json");
 	}
 	
 	
@@ -49,7 +49,7 @@ public class TopicJson {
 			TopicObj topicObj = new TopicObj("话题"+(i+1), kwList);
 			topicObjList.add(topicObj);
 		}
-		resultMap.put("name", "林丹事件");
+		resultMap.put("name", "拉斯维加斯枪击案");
 		resultMap.put("children", topicObjList);
 		return JSON.toJSON(resultMap);
 	}
